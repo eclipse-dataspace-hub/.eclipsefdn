@@ -16,53 +16,9 @@ orgs.newOrg('technology.dataspace-hub', 'eclipse-dataspace-hub') {
       allow_rebase_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: false,
-      description: "Guidance on documentation, scripts and integration steps on using the EDC project results",
+      description: "Minimum Viable Dataspace, consisting of two participants and their resources",
       has_discussions: true,
       squash_merge_commit_title: "PR_TITLE",
-      secrets: [
-        orgs.newRepoSecret('ACR_NAME') {
-          value: "********",
-        },
-        orgs.newRepoSecret('APP_CLIENT_ID') {
-          value: "********",
-        },
-        orgs.newRepoSecret('APP_CLIENT_SECRET') {
-          value: "********",
-        },
-        orgs.newRepoSecret('APP_OBJECT_ID') {
-          value: "********",
-        },
-        orgs.newRepoSecret('ARM_CLIENT_ID') {
-          value: "********",
-        },
-        orgs.newRepoSecret('ARM_CLIENT_SECRET') {
-          value: "********",
-        },
-        orgs.newRepoSecret('ARM_SUBSCRIPTION_ID') {
-          value: "********",
-        },
-        orgs.newRepoSecret('ARM_TENANT_ID') {
-          value: "********",
-        },
-        orgs.newRepoSecret('COMMON_RESOURCE_GROUP') {
-          value: "********",
-        },
-        orgs.newRepoSecret('COMMON_RESOURCE_GROUP_LOCATION') {
-          value: "********",
-        },
-        orgs.newRepoSecret('REGISTRY_SHARE') {
-          value: "********",
-        },
-        orgs.newRepoSecret('REGISTRY_STORAGE_ACCOUNT') {
-          value: "********",
-        },
-        orgs.newRepoSecret('TERRAFORM_STATE_CONTAINER') {
-          value: "********",
-        },
-        orgs.newRepoSecret('TERRAFORM_STATE_STORAGE_ACCOUNT') {
-          value: "********",
-        },
-      ],
       environments: [
         orgs.newEnvironment('copilot'),
       ],
@@ -72,8 +28,9 @@ orgs.newOrg('technology.dataspace-hub', 'eclipse-dataspace-hub') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
-      dependabot_alerts_enabled: false,
-      private: true,
+      dependabot_alerts_enabled: true,
+      description: "JAD - Just Another Demonstrator, a fully-fledged dataspace",
+      has_discussions: true,
     },
   ],
 }
