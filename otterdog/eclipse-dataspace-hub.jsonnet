@@ -67,5 +67,13 @@ orgs.newOrg('technology.dataspace-hub', 'eclipse-dataspace-hub') {
         orgs.newEnvironment('copilot'),
       ],
     },
+    orgs.newRepo('jad') {
+      allow_forking: false,
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      dependabot_alerts_enabled: false,
+      private: true,
+    },
   ],
 }
