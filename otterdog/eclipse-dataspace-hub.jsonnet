@@ -33,4 +33,9 @@ orgs.newOrg('technology.dataspace-hub', 'eclipse-dataspace-hub') {
       has_discussions: true,
     },
   ],
+} + {
+  # snippet added due to 'https://github.com/EclipseFdn/otterdog-configs/blob/main/blueprints/add-dot-github-repo.yml'
+  _repositories+:: [
+    orgs.newRepo('.github')
+  ],
 }
