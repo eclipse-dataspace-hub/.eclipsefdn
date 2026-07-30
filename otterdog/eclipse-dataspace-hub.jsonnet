@@ -67,5 +67,16 @@ orgs.newOrg('technology.dataspace-hub', 'eclipse-dataspace-hub') {
       secret_scanning: "enabled",
       secret_scanning_push_protection: "enabled",
     },
+    orgs.newRepo('samples') {
+      allow_forking: true,
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      dependabot_alerts_enabled: true,
+      description: "Samples encompassing multiple Eclipse Dataspace projects",
+      has_discussions: true,
+      secret_scanning: "enabled",
+      secret_scanning_push_protection: "enabled",
+    },
   ],
 }
