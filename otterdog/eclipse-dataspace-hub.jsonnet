@@ -78,6 +78,17 @@ orgs.newOrg('technology.dataspace-hub', 'eclipse-dataspace-hub') {
       secret_scanning: "enabled",
       secret_scanning_push_protection: "enabled",
     },
+    orgs.newRepo('edc-administration-api-client') {
+      allow_forking: true,
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      dependabot_alerts_enabled: true,
+      description: "EDC Administration API Client - Client for interacting with the Administration APIs of EDC Connector, Identity Hub and Issuer Service",
+      has_discussions: true,
+      secret_scanning: "enabled",
+      secret_scanning_push_protection: "enabled",
+    },
   ],
 } + {
   # snippet added due to 'https://github.com/eclipsefdn/otterdog-configs/blob/main/blueprints/add-dot-github-repo.yml'
