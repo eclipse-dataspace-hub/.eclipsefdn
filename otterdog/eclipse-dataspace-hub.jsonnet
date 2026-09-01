@@ -90,4 +90,9 @@ orgs.newOrg('technology.dataspace-hub', 'eclipse-dataspace-hub') {
       secret_scanning_push_protection: "enabled",
     },
   ],
+} + {
+  # snippet added due to 'https://github.com/eclipsefdn/otterdog-configs/blob/main/blueprints/add-dot-github-repo.yml'
+  _repositories+:: [
+    orgs.newRepo('.github')
+  ],
 }
