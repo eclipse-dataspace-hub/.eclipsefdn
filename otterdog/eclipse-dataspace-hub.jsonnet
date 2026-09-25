@@ -89,5 +89,31 @@ orgs.newOrg('technology.dataspace-hub', 'eclipse-dataspace-hub') {
       secret_scanning: "enabled",
       secret_scanning_push_protection: "enabled",
     },
+    orgs.newRepo('eclipse-dataspace-hub.github.io') {
+      allow_forking: true,
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      dependabot_alerts_enabled: true,
+      description: "Dataspace Hub webpage",
+      has_discussions: false,
+      has_wiki: false,
+      secret_scanning: "enabled",
+      secret_scanning_push_protection: "enabled",
+      gh_pages_build_type: "workflow",
+      homepage: "https://eclipse-dataspace-hub.github.io",
+      squash_merge_commit_title: "PR_TITLE",
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "main"
+          ],
+          deployment_branch_policy: "selected",
+        },
+      ],
+    },
   ],
 }
