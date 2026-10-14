@@ -12,6 +12,14 @@ orgs.newOrg('technology.dataspace-hub', 'eclipse-dataspace-hub') {
     orgs.extendRepo('.eclipsefdn') {
       gh_pages_build_type: "disabled",
     },
+    orgs.newRepo('.github') {
+      allow_rebase_merge: false,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      has_discussions: true,
+      has_wiki: false,
+      squash_merge_commit_title: "PR_TITLE",
+    },
     orgs.newRepo('MinimumViableDataspace') {
       allow_rebase_merge: false,
       allow_update_branch: false,
